@@ -14,6 +14,11 @@ import { useRef } from 'react';
 import { GrNext } from "react-icons/gr";
 import { GrFormPrevious } from "react-icons/gr";
 import { GrFormNext } from "react-icons/gr";
+import Portrait from "./Portrait";
+import { Link } from "react-router-dom";
+import FigurePainting from "./FigurePainting";
+import Abstract from "./Abstract";
+import Jewellary from "./Jewellary";
 
 function Home() {
   const [show, setShow] = useState(false);
@@ -36,9 +41,9 @@ function Home() {
               onClick={() => setShow(!show)}
             />
             <ul className="pt-5 font-bold">
-              <li className="pt-5">Home</li>
+              <Link to={'/'}><li className="pt-5">Home</li></Link>
               <li className="pt-5">Creator</li>
-              <li className="pt-5">Gallery</li>
+              <Link to={'/gallery'}><li className="pt-5">Gallery</li></Link>
               <li className="pt-5">Instagram</li>
             </ul>
           </div>
@@ -60,7 +65,7 @@ function Home() {
            }
           }
           autoplay={{
-            delay: 2000,
+            delay: 4000,
             disableOnInteraction: true,
             pauseOnMouseEnter:true
           }}
@@ -90,9 +95,13 @@ function Home() {
       <HiOutlineMenuAlt4
         className={`${
           show == false ? "w-10" : "w-0"
-        } absolute top-[15px] left-[50px] text-4xl font-bold`}
+        } fixed top-[15px] left-[50px] text-4xl font-bold`}
         onClick={() => setShow(!show)}
       />
+        <Link to={'/portrait'} onClick={()=>window.scrollTo(0,0)}><Portrait /></Link>
+        <Link to={'/figure'} onClick={()=>window.scrollTo(0,0)}><FigurePainting /></Link>
+        <Link to={'/abstract'} onClick={()=>window.scrollTo(0,0)}><Abstract /></Link>
+        <Link to={'/jewellary'} onClick={()=>window.scrollTo(0,0)}><Jewellary /></Link>
     </>
   );
 }
