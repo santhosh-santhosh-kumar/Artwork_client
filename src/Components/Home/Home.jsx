@@ -42,9 +42,9 @@ function Home() {
             />
             <ul className="pt-5 font-bold">
               <Link to={'/'}><li className="pt-5">Home</li></Link>
-              <li className="pt-5">Creator</li>
+              <Link to={'/creater'}><li className="pt-5">Creator</li></Link>
               <Link to={'/gallery'}><li className="pt-5">Gallery</li></Link>
-              <li className="pt-5">Instagram</li>
+              <a href="https://www.instagram.com/augustinesamuelgallery/profilecard/?igsh=MXhwb3RpZHc3cWd1Mg==" target='_blank'><li className="pt-5">Instagram</li></a>
             </ul>
           </div>
         </div>
@@ -65,10 +65,11 @@ function Home() {
            }
           }
           autoplay={{
-            delay: 4000,
+            delay: 3000,
             disableOnInteraction: true,
             pauseOnMouseEnter:true
           }}
+          speed={2000}
            >
             {slide.map((value)=>{
              return <SwiperSlide>

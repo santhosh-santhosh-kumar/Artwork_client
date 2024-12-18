@@ -30,9 +30,9 @@ function JewellaryPainting() {
         <div className="grid justify-items-auto grid-cols-5 gap-8 py-4 px-5  w-full">
               {jewellarys.map((value,index)=>{
                     return <>
-                    {/* <div className="border-2 border-gray-200 p-4"> */}
+                    <Link to={`/jewellary/${value.id}`}>
                           <img src={condition==index ? alter: value.img} alt="" className="border-4 border-black  object-cover w-[270px] h-[350px]" onMouseEnter={()=>handleCondition(index)}/>
-                    {/* </div> */}
+                          </Link>
                     </>
               })}
         </div>

@@ -26,15 +26,51 @@ function PortraitPainting() {
       <div className="px-10 pt-4">
             <p className="font-bold text-xl">Portrait Painting</p>
       </div>
-      <div className="grid justify-items-auto grid-cols-5 gap-8 py-4 px-5  w-full">
+      <div className="grid justify-items-auto grid-cols-5 gap-8 py-4 px-5  w-full ">
             {portrait.map((value,index)=>{
                   return <>
-                  
-                        <img src={condition==index ? value.alter: value.img} alt="" className={`border-4 border-black object-cover w-[270px] h-[350px] `} onMouseEnter={()=>handleCondition(index)}/>
-                  
+    <div
+        class="w-[270px] h-[350px] bg-transparent cursor-pointer group perspective"
+      >
+        <div
+          class="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000"
+        >
+          <div class="absolute backface-hidden border-2 w-full h-full">
+          <Link to={`/portrait/${value.id}`}>
+            <img src={value.img} class="w-full h-full border-4 border-black" />
+            </Link>
+          </div>
+          <div
+            class="absolute my-rotate-y-180 backface-hidden w-full h-full bg-gray-100 overflow-hidden"
+          >
+            <div
+              class="border-4 border-black text-center flex flex-col items-center justify-center h-full text-gray-800 px-2 pb-24"
+            >
+                  <Link to={`/portrait/${value.id}`}>
+              <img src={value.alter} alt="" className="w-full h-full "/>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+                  {/* <div className="relative w-[270px] h-[350px] perspective-1000">
+                        <Link to={`/portrait/${value.id}`}>
+                        <div className={`relative w-full h-full transform transition-transform duration-700 ${
+              condition === index ? "animate-flip" : "rotate-y-0"
+            }`}
+            onMouseEnter={() => handleCondition(index)}
+            onMouseLeave={() => handleCondition(-1)}>
+                        <img src={value.img} alt="" className={`absolute border-4 border-black object-cover w-full h-full backface-hidden `} />
+                        <img src={value.alter} alt="" className={`absolute border-4 border-black object-cover w-full h-full transform rotate-y-180 backface-hidden`} />
+                        </div>
+                        </Link>
+                        </div> */}
                   </>
             })}
       </div>
+      
     </>
   );
 }

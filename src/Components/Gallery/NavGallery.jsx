@@ -16,23 +16,23 @@ function NavGallery() {
       </div>
       <div className='w-6/12'>
             <ul className='flex flex-wrap items-center justify-end w-full'>
-            <Link to={'/'}><li className="px-8">Home</li></Link>
-              <li className="px-8">Creator</li>
-              <Link to={'/gallery'}><li className="px-8">Gallery</li></Link>
-              <li className="pl-8">Instagram</li>
+            <Link to={'/'} onClick={()=>window.scrollTo(0,0)}><li className="px-8">Home</li></Link>
+            <Link to={'/creater'} onClick={()=>window.scrollTo(0,0)}><li className="px-8">Creator</li></Link>
+              <Link to={'/gallery'} onClick={()=>window.scrollTo(0,0)}><li className="px-8">Gallery</li></Link>
+              <a href="https://www.instagram.com/augustinesamuelgallery/profilecard/?igsh=MXhwb3RpZHc3cWd1Mg==" target='_blank'><li className="pl-8">Instagram</li></a>
 
             </ul>
       </div>
-      <div className={`absolute top-16 left-5 z-10  bg-white h-screen w-[120px] ${show ? "translate-x-0" : "-translate-x-[200px]"} transition-all duration-700 ease-linear" }`}>
+      <div className={`absolute top-0 left-0 px-4 py-6 z-10  bg-white h-screen overflow-hidden w-[130px] ${show ? "translate-x-0" : "-translate-x-[200px]"} transition-all duration-700 ease-linear" }`}>
         <RiCloseLargeLine
                       className="absolute left-[80px] top-2 font-bold"
                       onClick={() => setShow(!show)}
                     />
         <ul className="pt-5 font-bold">
                       <Link to={'/'}><li className="pt-5">Home</li></Link>
-                      <li className="pt-5">Creator</li>
+                      <Link to={'/creater'}><li className="pt-5">Creator</li></Link>
                       <Link to={'/gallery'}><li className="pt-5">Gallery</li></Link>
-                      <li className="pt-5">Instagram</li>
+                      <a href="https://www.instagram.com/augustinesamuelgallery/profilecard/?igsh=MXhwb3RpZHc3cWd1Mg==" target='_blank'><li className="pt-5">Instagram</li></a>
                     </ul>
       </div>
     </div>

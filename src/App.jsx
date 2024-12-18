@@ -9,6 +9,11 @@ import PortraitPainting from './Components/Gallery/PortraitPainting'
 import Figure from './Components/Gallery/Figure'
 import AbstractPainting from './Components/Gallery/AbstractPainting'
 import JewellaryPainting from './Components/Gallery/JewellaryPainting'
+import PortraitDetails from './Components/Details/PortraitDetails'
+import FigureDetails from './Components/Details/FigureDetails'
+import AbstractDetails from './Components/Details/AbstractDetails'
+import JewellaryDetails from './Components/Details/JewellaryDetails'
+import Creater from './Components/Creater/Creater'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -23,6 +28,11 @@ function App() {
       <Route path='/figure' element={<Figure />}></Route>
       <Route path='/abstract' element={<AbstractPainting />}></Route>
       <Route path='/jewellary' element={<JewellaryPainting />}></Route>
+      <Route path='/portrait/:id'  element={<PortraitDetails />}></Route>
+      <Route path='/figure/:id' element={<FigureDetails />}></Route>
+      <Route path='/abstract/:id' element={<AbstractDetails />}></Route>
+      <Route path='/jewellary/:id' element={<JewellaryDetails />}></Route>
+      <Route path='/creater' element={<Creater />}></Route>
     </Routes>
     </BrowserRouter>
     </Context>
