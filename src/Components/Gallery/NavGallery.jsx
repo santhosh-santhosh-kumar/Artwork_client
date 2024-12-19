@@ -1,13 +1,35 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { HiOutlineMenuAlt4 } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import { RiCloseLargeLine } from "react-icons/ri";
+import NavBar from '../NavBar/NavBar';
+import { useContext } from "react";
+import { ContextProvide } from "../../Store/Context";
 
 function NavGallery() {
-  const [show,setShow]=useState(false)
+  const [
+                portrait,
+                setPortrait,
+                color,
+                setColor,
+                figures,
+                setFigures,
+                abstracts,
+                setAbstracts,
+                jewellarys,
+                setJewellarys,
+                alter,
+                setAlter,
+                sculptures,
+                setSculptures,
+                show, setShow,
+              ] =useContext(ContextProvide)
+              useEffect(()=>{
+                setShow(false)
+              },[])
   return (
     <>
-    <div className='  flex flex-wrap items-center w-full px-5 pt-4'>
+    <div className='fixed top-0 flex flex-wrap items-center w-full px-5 pt-4 pb-4 bg-white border border-b-2 z-10'>
       <div className=' w-4/12'>
       <HiOutlineMenuAlt4 className='text-4xl' onClick={()=>setShow(true)}/>
       </div>
@@ -23,19 +45,12 @@ function NavGallery() {
 
             </ul>
       </div>
-      <div className={`absolute top-0 left-0 px-4 py-6 z-10  bg-white h-screen overflow-hidden w-[130px] ${show ? "translate-x-0" : "-translate-x-[200px]"} transition-all duration-700 ease-linear" }`}>
-        <RiCloseLargeLine
-                      className="absolute left-[80px] top-2 font-bold"
-                      onClick={() => setShow(!show)}
-                    />
-        <ul className="pt-5 font-bold">
-                      <Link to={'/'}><li className="pt-5">Home</li></Link>
-                      <Link to={'/creater'}><li className="pt-5">Creator</li></Link>
-                      <Link to={'/gallery'}><li className="pt-5">Gallery</li></Link>
-                      <a href="https://www.instagram.com/augustinesamuelgallery/profilecard/?igsh=MXhwb3RpZHc3cWd1Mg==" target='_blank'><li className="pt-5">Instagram</li></a>
-                    </ul>
-      </div>
+      {/* <div className={`absolute top-0 left-0 px-4 py-6 z-20  bg-white h-screen overflow-hidden w-[100px] ${show ? "translate-x-0" : "-translate-x-[100px]"} transition-all duration-700 ease-linear" }`}>
+        
+      </div> */}
+      
     </div>
+    <NavBar />
     </>
   )
 }

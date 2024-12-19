@@ -3,7 +3,9 @@ import NavGallery from "./NavGallery";
 import { useContext } from "react";
 import { ContextProvide } from "../../Store/Context";
 import { Link } from "react-router-dom";
-
+import PortraitMobile from "../Mobile/PortraitMobile";
+import NavbarMobile from "../Mobile/NavbarMobile";
+import Footer from "../Footer/Footer"
 function PortraitPainting() {
   const [portrait, setPortrait,color, setColor,figures, setFigures,abstracts, setAbstracts,jewellarys, setJewellarys,alter,setAlter] = useContext(ContextProvide);
   const [condition,setCondition]=useState(-1)
@@ -12,7 +14,7 @@ function PortraitPainting() {
       portrait.map((value)=>{
             
             if(index==value.id){
-                  setCondition(value.id)
+                  setCondition(value.id) 
             }
       })
      
@@ -20,10 +22,15 @@ function PortraitPainting() {
  
   return (
     <>
-    <div className="border border-b-2 pb-4">
+    <div>
+      <div className="lg:hidden block">
+        <NavbarMobile />
+        <PortraitMobile />
+      </div>
+    <div className="lg:block hidden">    <div className="border border-b-2 pb-16 bg-white">
       <NavGallery />
       </div>
-      <div className="px-10 pt-4">
+      <div className="px-10 pt-4 ">
             <p className="font-bold text-xl">Portrait Painting</p>
       </div>
       <div className="grid justify-items-auto grid-cols-5 gap-8 py-4 px-5  w-full ">
@@ -46,7 +53,7 @@ function PortraitPainting() {
             <div
               class="border-4 border-black text-center flex flex-col items-center justify-center h-full text-gray-800 px-2 pb-24"
             >
-                  <Link to={`/portrait/${value.id}`}>
+                  <Link data-aos="fade-up" to={`/portrait/${value.id}`}>
               <img src={value.alter} alt="" className="w-full h-full "/>
               </Link>
             </div>
@@ -70,7 +77,9 @@ function PortraitPainting() {
                   </>
             })}
       </div>
-      
+      </div>
+      </div>
+<Footer />
     </>
   );
 }

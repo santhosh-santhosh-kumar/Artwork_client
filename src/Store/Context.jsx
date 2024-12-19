@@ -26,102 +26,150 @@ import abstract2 from "../assets/images/Abstract Painting/356230352_583415793873
 import abstract3 from "../assets/images/Abstract Painting/359464578_238540735662360_3604186813631442294_n.jpg";
 import abstract4 from "../assets/images/Abstract Painting/363908183_1040856527045220_6927438386513524732_n.jpg";
 
-import jewelry1 from "../assets/images/jewellary/202741572_797653961115594_7731965526858357466_n.jpg"; 
-import jewelry2 from "../assets/images/jewellary/202906763_813317822649679_3984283430883934327_n.jpg"; 
-import jewelry3 from "../assets/images/jewellary/212582467_1623200137876601_2569705543060557290_n.jpg"; 
-import jewelry4 from "../assets/images/jewellary/250624391_418657116576785_4655775350261783533_n.jpg"; 
-import jewelry5 from "../assets/images/jewellary/258784269_3108627106092241_572770414340829841_n.jpg"; 
-import jewelry6 from "../assets/images/jewellary/269955493_969437446980346_2407742515592380682_n.jpg"; 
-import jewelry7 from "../assets/images/jewellary/270260366_424825166016426_3926621100694394916_n.jpg"; 
-import jewelry8 from "../assets/images/jewellary/271155733_3227945834103546_3743225854466724033_n.jpg"; 
-import jewelry9 from "../assets/images/jewellary/271314876_1298930260605981_4599460024023545013_n.jpg"; 
-import jewelry10 from "../assets/images/jewellary/271838556_214652710787604_3909561292377197865_n.jpg"; 
-import jewelry11 from "../assets/images/jewellary/271981552_5523375791012012_7186016769463800589_n.jpg"; 
-import jewelry12 from "../assets/images/jewellary/272002860_136128502198377_3513433395893155010_n.jpg"; 
-import jewelry13 from "../assets/images/jewellary/272230313_486802636198685_310771548629050600_n.jpg"; 
-import jewelry14 from "../assets/images/jewellary/272370601_492625672281783_3559749649353247209_n.jpg"; 
-import jewelry15 from "../assets/images/jewellary/272461230_494572225622823_6014675693197776731_n.jpg"; 
-import jewelry16 from "../assets/images/jewellary/272734797_4832612426787771_3005327660065547113_n.jpg"; 
-import jewelry17 from "../assets/images/jewellary/273965319_4817587104990814_2487086275051776129_n.jpg"; 
-import jewelry18 from "../assets/images/jewellary/274184187_1064271640789143_1257587934406689765_n.jpg"; 
-import jewelry19 from "../assets/images/jewellary/276981550_2764110520556882_5156428351168075738_n.jpg"; 
-import jewelry20 from "../assets/images/jewellary/279572099_311073111172910_691974501656797388_n.jpg"; 
+import jewelry1 from "../assets/images/jewellary/202741572_797653961115594_7731965526858357466_n.jpg";
+import jewelry2 from "../assets/images/jewellary/202906763_813317822649679_3984283430883934327_n.jpg";
+import jewelry3 from "../assets/images/jewellary/212582467_1623200137876601_2569705543060557290_n.jpg";
+import jewelry4 from "../assets/images/jewellary/250624391_418657116576785_4655775350261783533_n.jpg";
+import jewelry5 from "../assets/images/jewellary/258784269_3108627106092241_572770414340829841_n.jpg";
+import jewelry6 from "../assets/images/jewellary/269955493_969437446980346_2407742515592380682_n.jpg";
+import jewelry7 from "../assets/images/jewellary/270260366_424825166016426_3926621100694394916_n.jpg";
+import jewelry8 from "../assets/images/jewellary/271155733_3227945834103546_3743225854466724033_n.jpg";
+import jewelry9 from "../assets/images/jewellary/271314876_1298930260605981_4599460024023545013_n.jpg";
+import jewelry10 from "../assets/images/jewellary/271838556_214652710787604_3909561292377197865_n.jpg";
+import jewelry11 from "../assets/images/jewellary/271981552_5523375791012012_7186016769463800589_n.jpg";
+import jewelry12 from "../assets/images/jewellary/272002860_136128502198377_3513433395893155010_n.jpg";
+import jewelry13 from "../assets/images/jewellary/272230313_486802636198685_310771548629050600_n.jpg";
+import jewelry14 from "../assets/images/jewellary/272370601_492625672281783_3559749649353247209_n.jpg";
+import jewelry15 from "../assets/images/jewellary/272461230_494572225622823_6014675693197776731_n.jpg";
+import jewelry16 from "../assets/images/jewellary/272734797_4832612426787771_3005327660065547113_n.jpg";
+import jewelry17 from "../assets/images/jewellary/273965319_4817587104990814_2487086275051776129_n.jpg";
+import jewelry18 from "../assets/images/jewellary/274184187_1064271640789143_1257587934406689765_n.jpg";
+import jewelry19 from "../assets/images/jewellary/276981550_2764110520556882_5156428351168075738_n.jpg";
+import jewelry20 from "../assets/images/jewellary/279572099_311073111172910_691974501656797388_n.jpg";
 
-import Alter from "../assets/images/Alter_Image/WhatsApp Image 2024-12-17 at 9.01.03 AM.jpeg"
+import Alter from "../assets/images/Alter_Image/WhatsApp Image 2024-12-17 at 9.01.03 AM.jpeg";
 
+import sculpture1 from "../assets/images/Sculpture/download_1.jpeg";
+import sculpture2 from "../assets/images/Sculpture/download_2.jpeg";
+import sculpture3 from "../assets/images/Sculpture/download_0.jpeg";
+import sculpture4 from "../assets/images/Sculpture/images_1.jpeg";
+import sculpture5 from "../assets/images/Sculpture/images_2.jpeg";
+import sculpture6 from "../assets/images/Sculpture/images_3.jpeg";
+import sculpture7 from "../assets/images/Sculpture/images_4.jpeg";
+import sculpture8 from "../assets/images/Sculpture/images_5.jpeg";
+import sculpture9 from "../assets/images/Sculpture/images_6.jpeg";
+import sculpture10 from "../assets/images/Sculpture/images_7.jpeg";
+import sculpture11 from "../assets/images/Sculpture/images_0.jpeg";
 export const ContextProvide = createContext();
 
 export function Context(props) {
   const portraitArray = [
-    {id:0,img:portrait1,alter:Alter},
-    {id:1,img:portrait2,alter:Alter},
-    {id:2,img:portrait3,alter:Alter},
-    {id:3,img:portrait4,alter:Alter},
-    {id:4,img:portrait5,alter:Alter},
-    {id:5,img:portrait6,alter:Alter},
+    { id: 0, img: portrait1, alter: Alter },
+    { id: 1, img: portrait2, alter: Alter },
+    { id: 2, img: portrait3, alter: Alter },
+    { id: 3, img: portrait4, alter: Alter },
+    { id: 4, img: portrait5, alter: Alter },
+    { id: 5, img: portrait6, alter: Alter },
   ];
   const figure = [
-    {id:0 ,img:figure1 ,alter:Alter},
-    {id:1 ,img:figure2 ,alter:Alter},
-    {id:2 ,img:figure3 ,alter:Alter},
-    {id:3 ,img:figure4 ,alter:Alter},
-    {id:4 ,img:figure5 ,alter:Alter},
-    {id:5 ,img:figure6 ,alter:Alter},
-    {id:6 ,img:figure7 ,alter:Alter},
-    {id:7 ,img:figure8 ,alter:Alter},
-    {id:8 ,img:figure9 ,alter:Alter},
-    {id:9 ,img:figure10,alter:Alter},
-    {id:10,img:figure11,alter:Alter},
-    {id:11,img:figure12,alter:Alter},
-    {id:12,img:figure13,alter:Alter},
-    {id:13,img:figure14,alter:Alter},
+    { id: 0, img: figure1, alter: Alter },
+    { id: 1, img: figure2, alter: Alter },
+    { id: 2, img: figure3, alter: Alter },
+    { id: 3, img: figure4, alter: Alter },
+    { id: 4, img: figure5, alter: Alter },
+    { id: 5, img: figure6, alter: Alter },
+    { id: 6, img: figure7, alter: Alter },
+    { id: 7, img: figure8, alter: Alter },
+    { id: 8, img: figure9, alter: Alter },
+    { id: 9, img: figure10, alter: Alter },
+    { id: 10, img: figure11, alter: Alter },
+    { id: 11, img: figure12, alter: Alter },
+    { id: 12, img: figure13, alter: Alter },
+    { id: 13, img: figure14, alter: Alter },
   ];
-  const abstract =[
-    {id:0,img:abstract1,alter:Alter},
-    {id:1,img:abstract2,alter:Alter},
-    {id:2,img:abstract3,alter:Alter},
-    {id:3,img:abstract4,alter:Alter}
-  ]
-  const jewelry=[
-    {id:0 ,img:jewelry1 ,alter:Alter},
-    {id:1 ,img:jewelry2 ,alter:Alter},
-    {id:2 ,img:jewelry3 ,alter:Alter},
-    {id:3 ,img:jewelry4 ,alter:Alter},
-    {id:4 ,img:jewelry5 ,alter:Alter},
-    {id:5 ,img:jewelry6 ,alter:Alter},
-    {id:6 ,img:jewelry7 ,alter:Alter},
-    {id:7 ,img:jewelry8 ,alter:Alter},
-    {id:8 ,img:jewelry9 ,alter:Alter},
-    {id:9 ,img:jewelry10,alter:Alter},
-    {id:10,img:jewelry11,alter:Alter},
-    {id:11,img:jewelry12,alter:Alter},
-    {id:12,img:jewelry13,alter:Alter},
-    {id:13,img:jewelry14,alter:Alter},
-    {id:14,img:jewelry15,alter:Alter},
-    {id:15,img:jewelry16,alter:Alter},
-    {id:16,img:jewelry17,alter:Alter},
-    {id:17,img:jewelry18,alter:Alter},
-    {id:18,img:jewelry19,alter:Alter},
-    {id:19,img:jewelry20,alter:Alter},]
-    const image=[Alter]
+  const abstract = [
+    { id: 0, img: abstract1, alter: Alter },
+    { id: 1, img: abstract2, alter: Alter },
+    { id: 2, img: abstract3, alter: Alter },
+    { id: 3, img: abstract4, alter: Alter },
+  ];
+  const jewelry = [
+    { id: 0, img: jewelry1, alter: Alter },
+    { id: 1, img: jewelry2, alter: Alter },
+    { id: 2, img: jewelry3, alter: Alter },
+    { id: 3, img: jewelry4, alter: Alter },
+    { id: 4, img: jewelry5, alter: Alter },
+    { id: 5, img: jewelry6, alter: Alter },
+    { id: 6, img: jewelry7, alter: Alter },
+    { id: 7, img: jewelry8, alter: Alter },
+    { id: 8, img: jewelry9, alter: Alter },
+    { id: 9, img: jewelry10, alter: Alter },
+    { id: 10, img: jewelry11, alter: Alter },
+    { id: 11, img: jewelry12, alter: Alter },
+    { id: 12, img: jewelry13, alter: Alter },
+    { id: 13, img: jewelry14, alter: Alter },
+    { id: 14, img: jewelry15, alter: Alter },
+    { id: 15, img: jewelry16, alter: Alter },
+    { id: 16, img: jewelry17, alter: Alter },
+    { id: 17, img: jewelry18, alter: Alter },
+    { id: 18, img: jewelry19, alter: Alter },
+    { id: 19, img: jewelry20, alter: Alter },
+  ];
+
+  const sculpture = [
+    { id: 0, img: sculpture1, alter: Alter },
+    { id: 1, img: sculpture2, alter: Alter },
+    { id: 2, img: sculpture3, alter: Alter },
+    { id: 3, img: sculpture4, alter: Alter },
+    { id: 4, img: sculpture5, alter: Alter },
+    { id: 5, img: sculpture6, alter: Alter },
+    { id: 6, img: sculpture7, alter: Alter },
+    { id: 7, img: sculpture8, alter: Alter },
+    { id: 8, img: sculpture9, alter: Alter },
+    { id: 9, img: sculpture10, alter: Alter },
+    { id: 10, img: sculpture11, alter: Alter },
+  ];
+  const image = [Alter];
   const [portrait, setPortrait] = useState([]);
   const [figures, setFigures] = useState([]);
   const [abstracts, setAbstracts] = useState([]);
   const [jewellarys, setJewellarys] = useState([]);
   const [color, setColor] = useState(false);
-  const [alter,setAlter]=useState([])
+  const [alter, setAlter] = useState([]);
+  const [sculptures, setSculptures] = useState([]);
+  const [show, setShow] = useState(false);
+
   useEffect(() => {
     const fetchItems = () => {
       setPortrait(portraitArray);
-      setFigures(figure)
-      setAbstracts(abstract)
-      setJewellarys(jewelry)
-      setAlter(image)
+      setFigures(figure);
+      setAbstracts(abstract);
+      setJewellarys(jewelry);
+      setAlter(image);
+      setSculptures(sculpture);
     };
     fetchItems();
   }, []);
   return (
-    <ContextProvide.Provider value={[portrait, setPortrait,color, setColor,figures, setFigures,abstracts, setAbstracts,jewellarys, setJewellarys,alter,setAlter]}>
+    <ContextProvide.Provider
+      value={[
+        portrait,
+        setPortrait,
+        color,
+        setColor,
+        figures,
+        setFigures,
+        abstracts,
+        setAbstracts,
+        jewellarys,
+        setJewellarys,
+        alter,
+        setAlter,
+        sculptures,
+        setSculptures,
+        show, setShow,
+      ]}
+    >
       {props.children}
     </ContextProvide.Provider>
   );
