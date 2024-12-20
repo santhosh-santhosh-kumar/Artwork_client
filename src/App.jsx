@@ -20,6 +20,8 @@ import PortraitMobileDetail from './Components/Mobile/MobileDetails/PortraitMobi
 import FigureMobileDeatils from './Components/Mobile/MobileDetails/FigureMobileDeatils';
 import AOS from 'aos';
 import "aos/dist/aos.css";
+import Admin from './Components/admin/admin'
+import Sample from './Components/Sample/Sample'
 
 AOS.init()
 
@@ -44,6 +46,8 @@ function App() {
       <Route path='/jewellary/:id' element={<JewellaryDetails />}></Route>
       <Route path='/sculpture/:id' element={<SculptureDetails />}></Route>
       <Route path='/creater' element={<Creater />}></Route>
+      <Route path='/admin_panel' element={<Admin />}></Route>
+      <Route path='/sample' element={<Sample />}></Route>
     </Routes>
     </BrowserRouter>
     </Context>

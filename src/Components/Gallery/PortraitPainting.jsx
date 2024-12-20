@@ -42,21 +42,21 @@ function PortraitPainting() {
         <div
           class="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000"
         >
-          <div class="absolute backface-hidden border-2 w-full h-full">
+          <div class="absolute backface-hidden border-2 w-full h-full p-3 border-gray-200">
           <Link to={`/portrait/${value.id}`}>
-            <img src={value.img} class="w-full h-full border-4 border-black" />
+            <img src={value.img} class="w-full h-full  " />
             </Link>
           </div>
           <div
             class="absolute my-rotate-y-180 backface-hidden w-full h-full bg-gray-100 overflow-hidden"
           >
-            <div
-              class="border-4 border-black text-center flex flex-col items-center justify-center h-full text-gray-800 px-2 pb-24"
+            {/* <div
+              class="border-4 border-gray-600 text-center flex flex-col items-center justify-center h-full text-gray-800 px-2 pb-24"
             >
                   <Link data-aos="fade-up" to={`/portrait/${value.id}`}>
               <img src={value.alter} alt="" className="w-full h-full "/>
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

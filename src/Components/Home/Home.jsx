@@ -55,7 +55,7 @@ function Home() {
     <>
       <div  className="lg:flex w-full h-screen lg:p-5 p-2 py-5 ">
         <NavBar />
-        <div  data-aos="fade-left" data-aos-duration="1500" className="relative lg:w-11/12 w-full overflow-hidden">
+        <div  data-aos="fade-left" data-aos-duration="1500" className="relative group lg:w-11/12 w-full overflow-hidden">
           <Swiper
             ref={swiperRef}
             onClick={handleClick}
@@ -69,7 +69,7 @@ function Home() {
               prevEl: ".prevArrow",
             }}
             autoplay={{
-              delay: 3000,
+              delay: 8000,
               disableOnInteraction: true,
               pauseOnMouseEnter: true,
             }}
@@ -77,13 +77,15 @@ function Home() {
           >
             {slide.map((value) => {
               return (
-                <SwiperSlide>
-                  <div className="w-full lg:h-full h-[550px]">
+                <SwiperSlide className="">
+                  <div className="relative w-full lg:h-full h-[550px] overflow-hidden">
                     <img
                       src={value}
                       alt=""
-                      className="w-full lg:h-full h-[550px] object-cover"
+                      style={{ boxShadow: 'inset 0 0 40px black' }}
+                      className="zoomable-image  w-full lg:h-full h-[550px] object-cover "
                     />
+                    <div className="absolute top-0 w-full h-full border-2 px-10  shadow-inner "></div>
                   </div>
                 </SwiperSlide>
               );
@@ -99,7 +101,7 @@ function Home() {
           <button className="prevArrow absolute right-1 top-1/2 z-20 text-slate-200 text-sm">
             <GrFormNext size={50} />
           </button>
-          <div className="text-right absolute bottom-5 lg:right-10  right-2 z-20 text-slate-200">
+          <div data-aos="fade-up" data-aos-duration="1000" className="text-right absolute bottom-5 lg:right-10  right-2 z-20 text-slate-200">
             <div className="flex-col ">
               <p className="uppercase pb-2 underline decoration-1 underline-offset-4">
                 augustinesamuelgallery
@@ -111,13 +113,16 @@ function Home() {
             </p>
           </div>
         </div>
+        
       </div>
+      
       <HiOutlineMenuAlt4
         className={`${
           show == false ? "w-10" : "w-0"
         } fixed top-[15px] lg:left-[50px] left-4 text-4xl font-bold`}
         onClick={() => setShow(!show)}
       />
+      
       <Link to={"/portrait"} onClick={() => window.scrollTo(0, 0)}>
         <Portrait  />
       </Link>

@@ -47,9 +47,7 @@ function AbstractPainting() {
       <div  className="grid justify-items-auto grid-cols-5 gap-8 py-4 px-5  w-full">
             {abstracts.map((value,index)=>{
                   return <>
-                  
-                        <Link data-aos="fade-up" to={`/abstract/${value.id}`}><img src={condition==index ? value.alter: value.img} alt=""  className={`border-4 border-black object-cover w-[270px] h-[350px] ${condition==index ? "transform transition duration-1000 scale-y-105": "scale-100"}`} onMouseEnter={()=>handleCondition(index)}/></Link>
-                  
+                        <Link data-aos="fade-up" to={`/abstract/${value.id}`}><img src={condition==index ? value.alter: value.img} alt=""  className={`p-3 border border-gray-400 object-cover w-[270px] h-[350px] ${condition==index ? "transform transition duration-1000 scale-y-105": "scale-100"}`} onMouseEnter={()=>handleCondition(index)}/></Link>
                   </>
             })}
       </div>

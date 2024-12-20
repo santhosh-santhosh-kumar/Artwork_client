@@ -39,17 +39,19 @@ function Figure() {
           {figures.map((value, index) => {
             return (
               <>
+              
                 <Link data-aos="fade-up" to={`/figure/${value.id}`}>
                   <img
                     src={condition == index ? alter : value.img}
                     alt=""
                     
-                    className={`border-4 border-black object-cover w-[270px] h-[350px] ${
+                    className={`p-3 border border-gray-400 object-cover w-[270px] h-[350px] ${
                       condition == index
                         ? "transform transition duration-1000 scale-y-105"
                         : "scale-100"
                     }`}
                     onMouseEnter={() => handleCondition(index)}
+                    
                   />
                 </Link>
               </>

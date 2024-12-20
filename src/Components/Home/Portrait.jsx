@@ -1,34 +1,58 @@
-import React from 'react'
-import { useContext } from 'react';
-import { ContextProvide } from '../../Store/Context';
+import React from "react";
+import { useContext } from "react";
+import { ContextProvide } from "../../Store/Context";
 
 function Portrait() {
-      const [portrait, setPortrait,color,setColor] = useContext(ContextProvide)
+  const [portrait, setPortrait, color, setColor] = useContext(ContextProvide);
   return (
     <>
-    <div className='p-5' data-aos="fade-up" data-aos-duration="1000">
-      <div className='relative lg:flex flex-wrap gap-5 justify-around border p-4 '>
-            {portrait.map((value,index)=>{
-                  if(index<4){
-                        return <>
-                        <div className=''>
-                        <img src={value.img} alt="" className={`${index<4 ? "lg:block": "hidden"} ${index==0 ? "sm:block" : "hidden"} object-cover lg:w-[280px] w-full h-full lg:h-[370px] border-4 border-black`} />
-                        </div>
-                        </>
-                  }
-            })}
-            <div className={`bg-[rgba(0,0,0,0.6)] hover:bg-[rgba(0,0,0,0.8)] transition-color duration-1000 w-full h-full  border  absolute top-0 left-0`}>
-      <div className='absolute lg:top-36 lg:left-1/2 top-1/2 left-20 text-center'>
-            <p className='text-white text-xl'>#expression</p>
-            <p className='bg-white w-20 h-[1.5px] ml-[50px]  mt-2'></p>
-            <p className='text-white text-2xl mt-1'>Portrait Painting</p>
-      </div>
-</div>
+      <div
+        className="px-5 py-3"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-offset="100"
+      >
+        <div className="group relative grid grid-cols-5 border w-full pl-7 py-7 ">
+          {portrait.map((value, index) => {
+            if (index < 5) {
+              return (
+                <>
+                  <div className="w-full">
+                    <img
+                      src={value.img}
+                      alt=""
+                      className={`${index < 5 ? "lg:block" : "hidden"} ${
+                        index == 0 ? "sm:block" : "hidden"
+                      } object-cover lg:w-[260px] w-full h-full lg:h-[370px] border-4 border-gray-400`}
+                    />
+                  </div>
+                </>
+              );
+            }
+          })}
+          <div
+            className={`bg-[rgba(0,0,0,0.6)] group-hover:bg-[rgba(0,0,0,0.9)] transition-color duration-1000 w-full h-full  border  absolute top-0`}
+          > </div>
+            <div className="absolute flex flex-wrap justify-center items-center w-full h-full">
+              <div
+                data-aos="zoom-in"
+                data-aos-duration="2000"
+                className=" top-0 text-center "
+              >
+                <p className="text-white text-xl  underline decoration-1 decoration-line underline-offset-[15px]">
+                  #expression
+                </p>
 
+                <p className="text-white text-2xl mt-[15px]">
+                  Portrait Painting
+                </p>
+              </div>
+            </div>
+         
+        </div>
       </div>
-    </div>
     </>
-  )
+  );
 }
 
-export default Portrait
+export default Portrait;

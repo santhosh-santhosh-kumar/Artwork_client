@@ -35,8 +35,8 @@ export default {
         flip: 'flip 0.7s ease-in-out',
       },
       boxShadow: {
-        inner: 'inset 0 50px 50px rgba(0, 0, 0, 0.8)', 
-        'inner-lg': 'inset 0 10px 15px rgba(0, 0, 0, 0.2)', 
+        inner: 'inset 0px  0px 150px rgba(0, 0, 0, 0.9)',
+        
       },
     },
   },

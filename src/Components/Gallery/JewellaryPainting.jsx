@@ -40,7 +40,7 @@ function JewellaryPainting() {
               {jewellarys.map((value,index)=>{
                     return <>
                     <Link data-aos="fade-up" to={`/jewellary/${value.id}`}>
-                          <img src={condition==index ? value.alter: value.img} alt="" className={`${condition==index ? "transform transition duration-1000 scale-y-105": "scale-100"} border-4 border-black  object-cover w-[270px] h-[350px]`} onMouseEnter={()=>handleCondition(index)}/>
+                          <img src={condition==index ? value.alter: value.img} alt="" className={`${condition==index ? "transform transition duration-1000 scale-y-105": "scale-100"} p-3 border border-gray-400 object-cover w-[270px] h-[350px]`} onMouseEnter={()=>handleCondition(index)}/>
                           </Link>
                     </>
               })}

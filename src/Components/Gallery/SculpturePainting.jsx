@@ -39,7 +39,7 @@ function SculpturePainting() {
             {sculptures.map((value,index)=>{
                   return <>
                   <Link to={`/sculpture/${value.id}`} data-aos="fade-up" >
-                        <img key={index} src={condition==index ? alter: value.img} alt="" className={`border-4 border-black object-cover w-[270px] h-[350px] ${condition==index ? "transform transition duration-1000 scale-y-105": "scale-100"}`} onMouseEnter={()=>handleCondition(index)}/>
+                        <img key={index} src={condition==index ? alter: value.img} alt="" className={`p-3 border border-gray-400 object-cover w-[270px] h-[350px] ${condition==index ? "transform transition duration-1000 scale-y-105": "scale-100"}`} onMouseEnter={()=>handleCondition(index)}/>
                         </Link>
                         </>
             })}

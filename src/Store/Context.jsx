@@ -92,6 +92,14 @@ export function Context(props) {
     { id: 1, img: abstract2, alter: Alter },
     { id: 2, img: abstract3, alter: Alter },
     { id: 3, img: abstract4, alter: Alter },
+    { id: 4, img: figure8, alter: Alter },
+    { id: 5, img: figure9, alter: Alter },
+    { id: 6, img: figure10, alter: Alter },
+    { id: 7, img: figure11, alter: Alter },
+    { id: 8, img: figure12, alter: Alter },
+    { id: 9, img: figure13, alter: Alter },
+    { id: 10, img: figure14, alter: Alter },
+
   ];
   const jewelry = [
     { id: 0, img: jewelry1, alter: Alter },

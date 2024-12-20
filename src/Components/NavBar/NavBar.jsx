@@ -60,10 +60,12 @@ function NavBar() {
             } transition-all duration-700 z-20 bg-white pl-10 py-4 h-screen overflow-hidden `}
           >
             <div className="flex items-center justify-between  mt-10 pr-4">
-              <div className={`text-slate-800 uppercase text-sm font-semibold transition-all duration-700 ${show ? "translate-y-0 opacity-100" : "opacity-0 translate-y-[300px]" }`}>augustine samuel</div>
+              <div className={`text-slate-800 uppercase text-sm font-semibold transition-all duration-1000 ${show ? "translate-y-0 opacity-100" : "opacity-0 translate-y-[300px]" }`}>augustine samuel</div>
               <div>
                 <RiCloseLargeLine
-                  className="font-bold text-3xl text-slate-800"
+                // data-aos="fade-right"
+                // data-aos-duration="2000"
+                  className="font-bold text-3xl text-slate-800 "
                   onClick={() => setShow(!show)}
                 />
               </div>
@@ -71,7 +73,7 @@ function NavBar() {
 
             <div className="lg:grid lg:grid-cols-2 gap-x-20 lg:mt-10">
               <div>
-                <ul className={`text-slate-700  font-bold text-lg transition-all duration-700 ${show ? "translate-y-0 opacity-100" : "opacity-0 translate-y-[300px]" }`}>
+                <ul className={`text-slate-700  font-bold text-lg transition-all duration-1000 ${show ? "translate-y-0 opacity-100" : "opacity-0 translate-y-[300px]" }`}>
                   <Link to={"/"}>
                     <li className=" hover:text-[#c9a25d]">Home</li>
                   </Link>
@@ -82,16 +84,16 @@ function NavBar() {
                     <li className="pt-5 hover:text-[#c9a25d]">Gallery</li>
                   </Link>
                   <a
-                    href="https://www.instagram.com/augustinesamuelgallery/profilecard/?igsh=MXhwb3RpZHc3cWd1Mg=="
+                    href="https://www.instagram.com/augustinesamuelgallery/"
                     target="_blank"
                   >
                     <li className="pt-5 hover:text-[#c9a25d]">Instagram</li>
                   </a>
                 </ul>
               </div>
-              <div className={`w-1 h-40 bg-[#c9a25d] transition-all duration-700 ${show ? "translate-y-0 opacity-100" : "opacity-0 translate-y-[300px]" }`}></div>
+              <div className={`w-[1px] h-40 bg-[#c9a25d] transition-all duration-700 ${show ? "translate-y-0 opacity-100" : "opacity-0 translate-y-[300px]" }`}></div>
             </div>
-            <div className={`transition-all duration-1000 ${show ? "translate-y-0 opacity-100" : "opacity-0 translate-y-[300px]" }`}>
+            <div className={`transition-all duration-1000 ${show ? "translate-y-0 opacity-100" : "opacity-0 translate-y-[400px]" }`}>
             <a href="mailto:example@example.com" class="email-link">
               <p className="pt-10 text-slate-500">augustine.samuel</p>
               <p className="text-slate-500">@gmail.com</p></a>
